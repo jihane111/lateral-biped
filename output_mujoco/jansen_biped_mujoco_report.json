@@ -1,0 +1,755 @@
+{
+  "units": "SI (m, kg, s); mm only where named",
+  "parameters": {
+    "linkage_size": 2.5,
+    "ratio": "7",
+    "motor_diameter": 42.0,
+    "motor_length": 45.0,
+    "motor_shaft_d": 5.0,
+    "output_shaft_d": 8.0,
+    "module1": 1.0,
+    "module2": null,
+    "gear_thickness": 5.0,
+    "link_width": 6.0,
+    "link_thickness": 3.0,
+    "link_bore": 3.2,
+    "layer_gap": 0.5,
+    "start_angle_deg": null,
+    "motor_mass_kg": 0.25,
+    "motor_rotor_inertia": 1.5e-05,
+    "gearbox_efficiency": 0.8,
+    "payload_mass_kg": 0.0,
+    "pla_density": 1240.0,
+    "print_fill": 0.9,
+    "pin_damping": 0.0005,
+    "pin_frictionloss": 0.002,
+    "pin_armature": 1e-06,
+    "crank_damping": 0.01,
+    "crank_frictionloss": 0.02,
+    "foot_radius_mm": 6.0,
+    "foot_halfwidth_mm": 1.5,
+    "floor_friction": 0.8,
+    "timestep": 0.001,
+    "crank_rpm": 30.0,
+    "actuator": "velocity",
+    "velocity_kv": 5.0,
+    "max_crank_torque": 10.0,
+    "sweep_step_deg": 5.0
+  },
+  "frame": "x forward, y left, z up; X = -x_plane, Y = z_shaft, Z = y_up; hinge axis +Y",
+  "linkage_numbers_a_to_m_mm": [
+    95.0,
+    103.75,
+    98.25,
+    100.25,
+    139.5,
+    98.5,
+    91.75,
+    164.25,
+    122.5,
+    125.0,
+    154.75,
+    19.5,
+    37.5
+  ],
+  "start_crank_angle_deg": 85.0,
+  "chassis_height_at_start_m": 0.23177378039231214,
+  "foot_height_difference_at_start_mm": 0.07877756976548689,
+  "counts": {
+    "hinge_joints": 21,
+    "expected_nq": 28,
+    "expected_nv": 27,
+    "connect_constraints": 10,
+    "expected_equality_rows": 30,
+    "expected_degrees_of_freedom_after_constraints": 7
+  },
+  "gearbox": {
+    "ratio": 7.0,
+    "stage1_module": 1.0,
+    "stage2_module": 1.5,
+    "reflected_inertia_on_crank_kgm2": 0.0007887894783866028,
+    "rotor_inertia_placeholder_kgm2": 1.5e-05,
+    "crank_speed_rad_s": 3.1415926535897927,
+    "motor_speed_rpm_at_crank_rpm": 210.0,
+    "motor_side_torque_factor": 0.17857142857142855
+  },
+  "link_layers": {
+    "layers_innermost_is_0": {
+      "crank": 0,
+      "j": 2,
+      "b": 0,
+      "e": 1,
+      "d": 2,
+      "k": 3,
+      "c": 1,
+      "g": 2,
+      "f": 0,
+      "i": 0,
+      "h": 1
+    },
+    "n_layers": 4,
+    "spacer_layers_per_node": {
+      "Z": 0,
+      "X": 1,
+      "Y": 0,
+      "W": 0,
+      "V": 0,
+      "U": 0,
+      "T": 0,
+      "S": 0
+    },
+    "total_spacer_layers": 1,
+    "links_sweeping_the_crank_axis": [
+      "j",
+      "k"
+    ],
+    "layers_reserved_for_shaft_hardware": 2,
+    "conflict_pairs": [
+      [
+        "crank",
+        "j",
+        "shared pivot"
+      ],
+      [
+        "crank",
+        "k",
+        "shared pivot"
+      ],
+      [
+        "j",
+        "b",
+        "shared pivot"
+      ],
+      [
+        "j",
+        "e",
+        "shared pivot"
+      ],
+      [
+        "j",
+        "k",
+        "shared pivot"
+      ],
+      [
+        "b",
+        "e",
+        "shared pivot"
+      ],
+      [
+        "b",
+        "d",
+        "shared pivot"
+      ],
+      [
+        "b",
+        "c",
+        "shared pivot"
+      ],
+      [
+        "e",
+        "d",
+        "shared pivot"
+      ],
+      [
+        "e",
+        "f",
+        "shared pivot"
+      ],
+      [
+        "d",
+        "c",
+        "shared pivot"
+      ],
+      [
+        "d",
+        "f",
+        "shared pivot"
+      ],
+      [
+        "k",
+        "c",
+        "shared pivot"
+      ],
+      [
+        "k",
+        "g",
+        "shared pivot"
+      ],
+      [
+        "k",
+        "i",
+        "shared pivot"
+      ],
+      [
+        "c",
+        "g",
+        "shared pivot"
+      ],
+      [
+        "c",
+        "i",
+        "shared pivot"
+      ],
+      [
+        "g",
+        "f",
+        "shared pivot"
+      ],
+      [
+        "g",
+        "i",
+        "shared pivot"
+      ],
+      [
+        "g",
+        "h",
+        "shared pivot"
+      ],
+      [
+        "f",
+        "h",
+        "shared pivot"
+      ],
+      [
+        "i",
+        "h",
+        "shared pivot"
+      ]
+    ]
+  },
+  "mass_kg": {
+    "total": 0.6967167710896941,
+    "by_group": {
+      "housing": 0.23638585660750716,
+      "motor": 0.25,
+      "gears": 0.02252177928228314,
+      "hardware": 0.08279121441300664,
+      "crankshaft": 0.05605078393584974,
+      "links": 0.04896713685104738
+    }
+  },
+  "centre_of_mass_O_frame_m": [
+    -0.059172540104080094,
+    -0.0010081407172923937,
+    0.0004563818266702873
+  ],
+  "com_x_minus_stance_centre_m": 0.043364837486286854,
+  "stance_centre_x_O_frame_m": -0.10253737759036695,
+  "stance_x_range_O_frame_m": [
+    -0.1670992702579388,
+    -0.030184724473813047
+  ],
+  "com_x_inside_stance_x_range": true,
+  "housing_window_mass_reduction_fraction": 0.5036183029426704,
+  "layout_checks_passed": true,
+  "mass_parts": [
+    {
+      "name": "housing_back_wall",
+      "group": "housing",
+      "mass_kg": 0.07009266208385748,
+      "centre_m": [
+        -0.038886646283343936,
+        -0.0305,
+        0.0013195206592428192
+      ]
+    },
+    {
+      "name": "housing_lid",
+      "group": "housing",
+      "mass_kg": 0.07009266208385748,
+      "centre_m": [
+        -0.038886646283343936,
+        0.0305,
+        0.0013195206592428192
+      ]
+    },
+    {
+      "name": "housing_wall_xm",
+      "group": "housing",
+      "mass_kg": 0.015118852578720237,
+      "centre_m": [
+        0.0375,
+        0.0,
+        0.0013195206592428192
+      ]
+    },
+    {
+      "name": "housing_wall_xp",
+      "group": "housing",
+      "mass_kg": 0.015118852578720237,
+      "centre_m": [
+        -0.11527329256668788,
+        0.0,
+        0.0013195206592428192
+      ]
+    },
+    {
+      "name": "housing_wall_ym",
+      "group": "housing",
+      "mass_kg": 0.013938743076743181,
+      "centre_m": [
+        -0.038886646283343936,
+        0.0,
+        -0.0375
+      ]
+    },
+    {
+      "name": "housing_wall_yp",
+      "group": "housing",
+      "mass_kg": 0.013938743076743181,
+      "centre_m": [
+        -0.038886646283343936,
+        0.0,
+        0.04013904131848564
+      ]
+    },
+    {
+      "name": "motor_sleeve",
+      "group": "housing",
+      "mass_kg": 0.019509935033605135,
+      "centre_m": [
+        -0.08637329256668787,
+        -0.0055,
+        0.009709288850175336
+      ]
+    },
+    {
+      "name": "housing_post_0",
+      "group": "housing",
+      "mass_kg": 0.0020733184504955764,
+      "centre_m": [
+        0.0325,
+        0.0,
+        -0.0325
+      ]
+    },
+    {
+      "name": "housing_post_1",
+      "group": "housing",
+      "mass_kg": 0.0020733184504955764,
+      "centre_m": [
+        -0.11027329256668787,
+        0.0,
+        -0.0325
+      ]
+    },
+    {
+      "name": "housing_post_2",
+      "group": "housing",
+      "mass_kg": 0.0020733184504955764,
+      "centre_m": [
+        0.0325,
+        0.0,
+        0.035139041318485637
+      ]
+    },
+    {
+      "name": "housing_post_3",
+      "group": "housing",
+      "mass_kg": 0.0020733184504955764,
+      "centre_m": [
+        -0.11027329256668787,
+        0.0,
+        0.035139041318485637
+      ]
+    },
+    {
+      "name": "housing_pivot_Y_post",
+      "group": "housing",
+      "mass_kg": 0.004728600729450568,
+      "centre_m": [
+        -0.095,
+        -0.0025000000000000005,
+        -0.0195
+      ]
+    },
+    {
+      "name": "housing_boss_back_O",
+      "group": "housing",
+      "mass_kg": 0.0013883828909568591,
+      "centre_m": [
+        -0.0,
+        -0.026500000000000003,
+        0.0
+      ]
+    },
+    {
+      "name": "housing_boss_lid_O",
+      "group": "housing",
+      "mass_kg": 0.0013883828909568591,
+      "centre_m": [
+        -0.0,
+        0.0345,
+        0.0
+      ]
+    },
+    {
+      "name": "housing_boss_back_C",
+      "group": "housing",
+      "mass_kg": 0.0013883828909568591,
+      "centre_m": [
+        -0.04489038226169209,
+        -0.026500000000000003,
+        0.0031390413184856384
+      ]
+    },
+    {
+      "name": "housing_boss_lid_C",
+      "group": "housing",
+      "mass_kg": 0.0013883828909568591,
+      "centre_m": [
+        -0.04489038226169209,
+        0.0345,
+        0.0031390413184856384
+      ]
+    },
+    {
+      "name": "motor_envelope_placeholder",
+      "group": "motor",
+      "mass_kg": 0.25,
+      "centre_m": [
+        -0.08637329256668787,
+        -0.0055,
+        0.009709288850175336
+      ]
+    },
+    {
+      "name": "input_pinion",
+      "group": "gears",
+      "mass_kg": 0.0019326920925251732,
+      "centre_m": [
+        -0.08637329256668787,
+        0.020999999999999998,
+        0.009709288850175336
+      ]
+    },
+    {
+      "name": "compound_large_gear",
+      "group": "gears",
+      "mass_kg": 0.017394228832726556,
+      "centre_m": [
+        -0.04489038226169209,
+        0.020999999999999998,
+        0.0031390413184856384
+      ]
+    },
+    {
+      "name": "compound_pinion",
+      "group": "gears",
+      "mass_kg": 0.003194858357031408,
+      "centre_m": [
+        -0.04489038226169209,
+        0.013000000000000001,
+        0.0031390413184856384
+      ]
+    },
+    {
+      "name": "bearing_O_front",
+      "group": "hardware",
+      "mass_kg": 0.012,
+      "centre_m": [
+        -0.0,
+        0.0325,
+        0.0
+      ]
+    },
+    {
+      "name": "bearing_O_back",
+      "group": "hardware",
+      "mass_kg": 0.012,
+      "centre_m": [
+        -0.0,
+        -0.0285,
+        0.0
+      ]
+    },
+    {
+      "name": "bearing_C_front",
+      "group": "hardware",
+      "mass_kg": 0.012,
+      "centre_m": [
+        -0.04489038226169209,
+        0.0325,
+        0.0031390413184856384
+      ]
+    },
+    {
+      "name": "bearing_C_back",
+      "group": "hardware",
+      "mass_kg": 0.012,
+      "centre_m": [
+        -0.04489038226169209,
+        -0.0285,
+        0.0031390413184856384
+      ]
+    },
+    {
+      "name": "compound_shaft",
+      "group": "hardware",
+      "mass_kg": 0.028410050684943216,
+      "centre_m": [
+        -0.04489038226169209,
+        0.0,
+        0.0031390413184856384
+      ]
+    },
+    {
+      "name": "pivot_Y_rod",
+      "group": "hardware",
+      "mass_kg": 0.006381163728063418,
+      "centre_m": [
+        -0.095,
+        0.0,
+        -0.0195
+      ]
+    },
+    {
+      "name": "output_shaft",
+      "group": "crankshaft",
+      "mass_kg": 0.03448664485922274,
+      "centre_m": [
+        -0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "output_gear",
+      "group": "crankshaft",
+      "mass_kg": 0.017394228832726556,
+      "centre_m": [
+        -0.0,
+        0.013000000000000001,
+        0.0
+      ]
+    },
+    {
+      "name": "crank_L",
+      "group": "crankshaft",
+      "mass_kg": 0.0020849551219502215,
+      "centre_m": [
+        -0.0016341701765185902,
+        0.039,
+        0.01867865058922023
+      ]
+    },
+    {
+      "name": "crank_R",
+      "group": "crankshaft",
+      "mass_kg": 0.0020849551219502215,
+      "centre_m": [
+        0.0016341701765185922,
+        -0.039,
+        -0.01867865058922023
+      ]
+    },
+    {
+      "name": "j_L",
+      "group": "links",
+      "mass_kg": 0.0025518100425523686,
+      "centre_m": [
+        -0.061816221807492945,
+        0.046,
+        0.059229557056492785
+      ]
+    },
+    {
+      "name": "k_L",
+      "group": "links",
+      "mass_kg": 0.003149428042552369,
+      "centre_m": [
+        -0.028667862436972488,
+        0.0495,
+        -0.03573000895750369
+      ]
+    },
+    {
+      "name": "i_L",
+      "group": "links",
+      "mass_kg": 0.002501590042552369,
+      "centre_m": [
+        -0.03506644624311389,
+        0.039,
+        -0.16704554974288
+      ]
+    },
+    {
+      "name": "j_R",
+      "group": "links",
+      "mass_kg": 0.0025518100425523686,
+      "centre_m": [
+        -0.024281978244531422,
+        -0.046,
+        0.018742876585738373
+      ]
+    },
+    {
+      "name": "k_R",
+      "group": "links",
+      "mass_kg": 0.003149428042552369,
+      "centre_m": [
+        -0.06507006741176688,
+        -0.0495,
+        -0.07364438771306556
+      ]
+    },
+    {
+      "name": "i_R",
+      "group": "links",
+      "mass_kg": 0.002501590042552369,
+      "centre_m": [
+        -0.1541483460806614,
+        -0.039,
+        -0.16756323853511865
+      ]
+    },
+    {
+      "name": "b_L",
+      "group": "links",
+      "mass_kg": 0.002124940042552369,
+      "centre_m": [
+        -0.10768205163097436,
+        0.039,
+        0.03080090646727256
+      ]
+    },
+    {
+      "name": "e_L",
+      "group": "links",
+      "mass_kg": 0.002843086042552368,
+      "centre_m": [
+        -0.15698056568024754,
+        0.0425,
+        0.021736021606800562
+      ]
+    },
+    {
+      "name": "d_L",
+      "group": "links",
+      "mass_kg": 0.0020546320425523686,
+      "centre_m": [
+        -0.14429851404927319,
+        0.046,
+        -0.028564884860471998
+      ]
+    },
+    {
+      "name": "f_L",
+      "group": "links",
+      "mass_kg": 0.0020194780425523686,
+      "centre_m": [
+        -0.1691453879261815,
+        0.039,
+        -0.08038114154549711
+      ]
+    },
+    {
+      "name": "c_L",
+      "group": "links",
+      "mass_kg": 0.0020144560425523687,
+      "centre_m": [
+        -0.0745336922604539,
+        0.0425,
+        -0.06415865954672392
+      ]
+    },
+    {
+      "name": "g_L",
+      "group": "links",
+      "mass_kg": 0.0018838840425523687,
+      "centre_m": [
+        -0.09938056613736221,
+        0.046,
+        -0.11597491623174902
+      ]
+    },
+    {
+      "name": "h_L",
+      "group": "links",
+      "mass_kg": 0.0033402640425523687,
+      "centre_m": [
+        -0.08037962785956831,
+        0.0425,
+        -0.17420314688118116
+      ]
+    },
+    {
+      "name": "b_R",
+      "group": "links",
+      "mass_kg": 0.002124940042552369,
+      "centre_m": [
+        -0.07341614842105001,
+        -0.039,
+        0.0276715271749586
+      ]
+    },
+    {
+      "name": "e_R",
+      "group": "links",
+      "mass_kg": 0.002843086042552368,
+      "centre_m": [
+        -0.11754232692777099,
+        -0.0425,
+        0.05144958418963066
+      ]
+    },
+    {
+      "name": "d_R",
+      "group": "links",
+      "mass_kg": 0.0020546320425523686,
+      "centre_m": [
+        -0.139126178506721,
+        -0.046,
+        0.0042780570146720605
+      ]
+    },
+    {
+      "name": "f_R",
+      "group": "links",
+      "mass_kg": 0.0020194780425523686,
+      "centre_m": [
+        -0.19849680542290066,
+        -0.039,
+        -0.018775171375728324
+      ]
+    },
+    {
+      "name": "c_R",
+      "group": "links",
+      "mass_kg": 0.0020144560425523687,
+      "centre_m": [
+        -0.11420423758828546,
+        -0.0425,
+        -0.06471573712384532
+      ]
+    },
+    {
+      "name": "g_R",
+      "group": "links",
+      "mass_kg": 0.0018838840425523687,
+      "centre_m": [
+        -0.17357486450446513,
+        -0.046,
+        -0.0877689655142457
+      ]
+    },
+    {
+      "name": "h_R",
+      "group": "links",
+      "mass_kg": 0.0033402640425523687,
+      "centre_m": [
+        -0.19431473540855562,
+        -0.0425,
+        -0.1454007298016737
+      ]
+    }
+  ],
+  "assumptions": [
+    "Masses come from printed-part volumes x PLA density x print_fill, with a placeholder motor mass; no battery or electronics unless --payload-mass is set.",
+    "The gear train is lumped: the actuator drives the crankshaft joint directly and gear/rotor inertia is added as joint armature.",
+    "Friction, damping and armature values are assumptions, not measurements.",
+    "Feet are rounded (capsule) contacts of the stated radius and a 3 mm lateral width; links do not collide with each other or the floor.",
+    "A positive crank rotation walks the robot toward +X."
+  ],
+  "not_verified": "This XML has not been compiled by MuJoCo in the environment that generated it; run jansen_biped.mujoco_run check."
+}

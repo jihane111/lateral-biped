@@ -1,0 +1,28 @@
+{
+  "ended_by": "viewer closed by user",
+  "manual_end": true,
+  "simulated_s": 5.050000000000021,
+  "fell_at_s": 0.48000000000000037,
+  "forward_distance_m": 0.02512438496233998,
+  "mean_forward_speed_m_s": 0.004975125735116807,
+  "lateral_drift_m": -0.19898211076682262,
+  "chassis_height_m": [
+    0.03266819001298686,
+    0.23136766540510126
+  ],
+  "max_abs_roll_deg": 116.50202535794865,
+  "max_abs_pitch_deg": 33.671708618146674,
+  "peak_crank_torque_Nm": 10.0,
+  "rms_crank_torque_Nm": 1.7163176849228445,
+  "mean_crank_power_W": 2.047610536562835,
+  "peak_motor_side_torque_Nm": 1.7857142857142856,
+  "torque_limit_hit": true,
+  "foot_contact_fraction": {
+    "left": 0.08134920634920635,
+    "right": 0.9325396825396826,
+    "both": 0.06746031746031746,
+    "neither": 0.05357142857142857
+  },
+  "housing_touched_floor": true,
+  "max_loop_closure_gap_m": 0.00045040241290874076
+}
